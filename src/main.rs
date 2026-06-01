@@ -3,7 +3,7 @@ use std::io;
 use rand::RngExt;
 
 fn main() {
-    println!("Raqamni topish o'yini!");
+    println!("🔢  Raqamni topish o'yini! 🔢");
 
     let yashirin_raqam=rand::rng().random_range(1..=100);
 
@@ -17,7 +17,7 @@ fn main() {
 
         match taxmin.trim().as_ref() {
             "quit" => {
-                println!("Dastur yakunlandi");
+              break_program();
                 break;
             }
             _ => {
@@ -38,7 +38,7 @@ fn main() {
             Ordering::Less=>println!("Raqam kichik!"),
             Ordering::Greater=>println!("Raqam katta!"),
             Ordering::Equal=>{
-                println!("Siz yutdingiz!");
+                println!("🥳  Siz yutdingiz! 🥳");
                 break;
             }
         };
@@ -47,4 +47,6 @@ fn main() {
 
 }
 
-
+fn break_program(){
+    println!("😔  Dastur yakunlandi 😔");
+}
